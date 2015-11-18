@@ -42,6 +42,13 @@ module.exports = [
             "cordova.plugins.Keyboard"
         ],
         "runs": true
+    },
+    {
+        "file": "plugins/cn.jpush.phonegap.JPushPlugin/www/JPushPlugin.js",
+        "id": "cn.jpush.phonegap.JPushPlugin.JPushPlugin",
+        "clobbers": [
+            "window.plugins.jPushPlugin"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -52,7 +59,8 @@ module.exports.metadata =
     "cordova-plugin-splashscreen": "2.1.0",
     "cordova-plugin-statusbar": "1.0.1",
     "cordova-plugin-whitelist": "1.0.0",
-    "ionic-plugin-keyboard": "1.0.7"
+    "ionic-plugin-keyboard": "1.0.7",
+    "cn.jpush.phonegap.JPushPlugin": "2.0.2"
 }
 // BOTTOM OF METADATA
 });

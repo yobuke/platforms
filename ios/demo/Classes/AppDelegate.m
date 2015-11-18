@@ -29,6 +29,8 @@
 #import "MainViewController.h"
 
 #import <Cordova/CDVPlugin.h>
+#import "APService.h"
+#import "JPushPlugin.h"
 
 @implementation AppDelegate
 
@@ -88,6 +90,8 @@
     self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
 
+    //Required add
+    [JPushPlugin setLaunchOptions:launchOptions];
     return YES;
 }
 
@@ -125,6 +129,8 @@
             stringByReplacingOccurrencesOfString:@" " withString:@""];
 
         [[NSNotificationCenter defaultCenter] postNotificationName:CDVRemoteNotification object:token];
+        // Required add
+        [APService registerDeviceToken:deviceToken];
     }
 
     - (void)                                 application:(UIApplication*)application
